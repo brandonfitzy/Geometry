@@ -1,2 +1,2 @@
 # Geometry
-#Practicing Structs and Pointers in C
+Practicing Structs and Pointers in C
