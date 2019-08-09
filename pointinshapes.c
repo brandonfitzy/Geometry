@@ -50,12 +50,14 @@ int main() {
 
 int dointersect(int py, int sy1, int sy2){
 	int b;
+	int y1;
+	int y2;
 	if (sy1<sy2){
-		int y1=sy1;
-		int y2=sy2;
+		y1=sy1;
+		y2=sy2;
 	} else {
-		int y1=sy2;
-		int y2=sy1;
+		y1=sy2;
+		y2=sy1;
 	}
 	if (py>y1 && py<y2){
 		b=1;
