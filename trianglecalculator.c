@@ -47,13 +47,28 @@ int main() {
 	return 0;
 }
 
+//function to calculate the exterior angles
+double extanglecalc(int k){
+	double angle;
+	if (k==1){
+		angle=180-anglecalc(k);
+	} else if (k==2) {
+		angle=180-anglecalc(k);
+	} else if (k==3) {
+		angle=180-anglecalc(k);
+	} else {
+		printf("Invalid selection pick point 1, 2 or 3.");
+		angle=0;
+	}
+	return angle;
+}
 
 //function to calculate angles using the points, law of cosines
 double anglecalc(int k){
-	int angle;
-	int a = sqrt(((one.x1-one.x2)*(one.x1-one.x2))+((one.y1-one.y2)*(one.y1-one.y2)));
-	int b = sqrt(((one.x2-one.x3)*(one.x2-one.x3))+((one.y2-one.y3)*(one.y2-one.y3)));
-	int c = sqrt(((one.x1-one.x3)*(one.x1-one.x3))+((one.y1-one.y3)*(one.y1-one.y3)));
+	double angle;
+	double a = sqrt(((one.x1-one.x2)*(one.x1-one.x2))+((one.y1-one.y2)*(one.y1-one.y2)));
+	double b = sqrt(((one.x2-one.x3)*(one.x2-one.x3))+((one.y2-one.y3)*(one.y2-one.y3)));
+	double c = sqrt(((one.x1-one.x3)*(one.x1-one.x3))+((one.y1-one.y3)*(one.y1-one.y3)));
 	if (a==1){
 		angle=(180/3.14)*(acos((pow(c,2)+pow(a,2)-pow(b,2))/(2*c*a)));
 	} else if (a==2) {
